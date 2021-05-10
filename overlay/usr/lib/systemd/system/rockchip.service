@@ -1,0 +1,14 @@
+#start
+[Unit]
+Description=Setup rockchip platform environment
+#Before=gdm.service
+After=network.service
+
+[Service]
+Type=simple
+ExecStart=/etc/rc.d/rockchip.sh
+
+[Install]
+WantedBy=multi-user.target
+#end
+
